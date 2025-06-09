@@ -1,0 +1,30 @@
+name: 'webfactory/ssh-agent'
+description: 'Run `ssh-agent` and load an SSH key to access other private repositories'
+inputs:
+    ssh-private-key:
+        description: 'Private SSH key to register in the SSH agent'
+        required: true
+    ssh-auth-sock:
+        description: 'Where to place the SSH Agent auth socket'
+    log-public-key:
+        description: 'Whether or not to log public key fingerprints'
+        required: false
+        default: true
+    ssh-agent-cmd:
+        description: 'ssh-agent command'
+        required: false
+    ssh-add-cmd:
+        description: 'ssh-add command'
+        required: false
+    git-cmd:
+        description: 'git command'
+        required: false
+runs:
+    using: 'node20'
+    main: 'dist/index.js'
+    post: 'dist/cleanup.js'
+    post-if: 'always()'
+
+branding:
+    icon: loader
+    color: 'yellow'

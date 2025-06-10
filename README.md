@@ -51,7 +51,7 @@ You can set up different keys as different secrets and pass them all to the acti
 
 ```yaml
 # ... contents as before
-            - uses: step-security/ssh-agent@v0.9.0
+            - uses: step-security/ssh-agent@v0
               with:
                   ssh-private-key: |
                         ${{ secrets.FIRST_KEY }}

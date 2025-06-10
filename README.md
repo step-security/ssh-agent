@@ -7,7 +7,7 @@ This action
 
 It should work in all GitHub Actions virtual environments, including container-based workflows. 
 
-Windows and Docker support is, however, somewhat new. Since we have little feedback from the field, things might not run so smooth for you as we'd hope. If Windows and/or Docker-based workflows work well for you, leave a :+1: at https://github.com/step-security/ssh-agent/pull/17.
+Windows and Docker support is, however, somewhat new. Since we have little feedback from the field, things might not run so smooth for you as we'd hope. 
 
 Also, using multiple GitHub deployment keys is supported; keys are mapped to repositories by using SSH key comments (see below).
 
@@ -103,9 +103,6 @@ If the private key is not in the `PEM` format, you will see an `Error loading ke
 
 Use `ssh-keygen -p -f path/to/your/key -m pem` to convert your key file to `PEM`, but be sure to make a backup of the file first 😉.
 
-## Additional Information for Particular Tools or Platforms
-
-If you know that your favorite tool or platform of choice requires extra tweaks or has some caveats when running with SSH, feel free to open a PR to amend this section here.
 
 ### Container-based Workflows
 
@@ -264,11 +261,5 @@ As a note to my future self, in order to work on this repo:
 
 ## Credits, Copyright and License
 
-This action was written by webfactory GmbH, Bonn, Germany. We're a software development
-agency with a focus on PHP (mostly [Symfony](http://github.com/symfony/symfony)). If you're a 
-developer looking for new challenges, we'd like to hear from you! 
-
-- <https://www.webfactory.de>
-- <https://twitter.com/webfactory>
-
 Copyright 2019 – 2023 webfactory GmbH, Bonn. Code released under [the MIT license](LICENSE).
+Copyright 2025 Step Security.

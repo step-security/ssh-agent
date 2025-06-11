@@ -1,0 +1,19 @@
+{
+    "name": "webfactory-action-ssh-agent",
+    "repository": "git@github.com:step-security/ssh-agent.git",
+    "description": "GitHub Action to set up ssh-agent with a private SSH key",
+    "version": "0.7.0",
+    "main": "index.js",
+    "author": "step-security",
+    "license": "MIT",
+    "devDependencies": {
+        "@actions/core": "^1.9.1",
+        "@vercel/ncc": "^0.38.3"
+    },
+    "scripts": {
+        "build": "node scripts/build.js"
+    },
+    "dependencies": {
+        "axios": "^1.9.0"
+    }
+}

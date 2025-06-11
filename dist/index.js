@@ -11502,7 +11502,7 @@ async function validateSubscription() {
 
 try {
     (async () => {
-        await validateSubscription()
+        await validateSubscription();
         const privateKey = core.getInput('ssh-private-key');
         const logPublicKey = core.getBooleanInput('log-public-key', {default: true});
     

@@ -11651,33 +11651,6 @@ axios.default = axios;
 // this module should only have a default export
 /* harmony default export */ const lib_axios = (axios);
 
-;// CONCATENATED MODULE: ./node_modules/axios/index.js
-
-
-// This module is intended to unwrap Axios default export as named.
-// Keep top-level export same with static properties
-// so that it can keep same with es module or cjs
-const {
-  Axios: axios_Axios,
-  AxiosError: axios_AxiosError,
-  CanceledError: axios_CanceledError,
-  isCancel: axios_isCancel,
-  CancelToken: axios_CancelToken,
-  VERSION: axios_VERSION,
-  all: axios_all,
-  Cancel,
-  isAxiosError: axios_isAxiosError,
-  spread: axios_spread,
-  toFormData: axios_toFormData,
-  AxiosHeaders: axios_AxiosHeaders,
-  HttpStatusCode: axios_HttpStatusCode,
-  formToJSON,
-  getAdapter,
-  mergeConfig: axios_mergeConfig
-} = lib_axios;
-
-
-
 ;// CONCATENATED MODULE: ./index.js
 const core = __nccwpck_require__(7484);
 const child_process = __nccwpck_require__(5317);
@@ -11692,7 +11665,7 @@ async function validateSubscription() {
   try {
     await lib_axios.get(API_URL, { timeout: 3000 })
   } catch (error) {
-    if (axios_isAxiosError(error) && error.response) {
+    if (error.response && error.response.status === 403) {
       core.error(
         'Subscription is not valid. Reach out to support@stepsecurity.io'
       )

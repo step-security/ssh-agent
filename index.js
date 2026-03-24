@@ -24,6 +24,11 @@ async function validateSubscription() {
 
 try {
     (async () => {
+        const repoPrivate = JSON.parse(process.env.GITHUB_CONTEXT || '{}').repository?.private
+        if (repoPrivate === false) {
+          core.info('\u001b[32m✓ Free for public repositories\u001b[0m')
+          return
+        }
         await validateSubscription();
         const privateKey = core.getInput('ssh-private-key');
         const logPublicKey = core.getBooleanInput('log-public-key', {default: true});

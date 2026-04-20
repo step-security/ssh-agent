@@ -7,6 +7,10 @@ on:
         description: "Base branch to create the PR against"
         required: true
         default: "main"
+      node_version:
+        description: "Specify Node.js version (e.g., '18', '20', 'lts/*')"
+        required: false
+        default: "24"
 
 permissions:
   contents: write
@@ -21,3 +25,4 @@ jobs:
       original-owner: "webfactory"
       repo-name: "ssh-agent"
       base_branch: ${{ inputs.base_branch }}
+      node_version: "${{ inputs.node_version || '24' }}"

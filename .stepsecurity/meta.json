@@ -1,0 +1,18 @@
+{
+   "schema_version": "1",
+   "onboarding_type": "copied",
+   "archived": false,
+   "maintained_action_name": "step-security/ssh-agent",
+   "upstream_full_repo_name": "webfactory/ssh-agent",
+   "action_type": "node",
+   "last_release": {
+     "tag_name": "v0.10.0",
+     "created_at": "2026-04-21T05:04:05Z",
+     "published_at": "2026-04-21T08:32:39Z"
+   },
+   "sync": {
+     "ignore_presets": [
+       "defaults_v1"
+     ]
+   }
+ }
